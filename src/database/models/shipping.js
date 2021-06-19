@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Shipping.belongsTo(models.Order,{as:'orders'});
     }
   };
   Shipping.init({
