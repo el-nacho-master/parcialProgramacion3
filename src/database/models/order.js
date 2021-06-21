@@ -11,9 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Order.belongsTo(models.State,{as:'states'});
-      Order.belongsTo(models.User,{as:'users'});
-      Order.belongsTo(models.Payment,{as:'payments'});
+      Order.belongsTo(models.State);
+      Order.belongsTo(models.User);
+      Order.belongsTo(models.Payment);
       Order.hasOne(models.Shipping,{
         as:'shippings',
         foreignKey:'orderId',
